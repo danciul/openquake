@@ -5,12 +5,12 @@ import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 import java.util.Random;
 
-import org.gem.engine.hazard.GEM1ERF;
 import org.gem.engine.hazard.parsers.nshmp.NshmpFault2GemSourceData;
 import org.junit.Test;
 import org.opensha.commons.geo.Location;
 import org.opensha.sha.earthquake.EqkRupture;
 import org.opensha.sha.earthquake.ProbEqkRupture;
+import org.opensha.sha.earthquake.rupForecastImpl.GEM1.GEM1ERF;
 import org.opensha.sha.earthquake.rupForecastImpl.GEM1.SourceData.GEMFaultSourceData;
 import org.opensha.sha.earthquake.rupForecastImpl.GEM1.SourceData.GEMSourceData;
 import org.opensha.sha.faultSurface.FaultTrace;

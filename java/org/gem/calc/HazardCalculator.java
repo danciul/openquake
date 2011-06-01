@@ -80,6 +80,8 @@ public class HazardCalculator {
         try {
             curveCalculator = new HazardCurveCalculator();
             curveCalculator.setMaxSourceDistance(integrationDistance);
+            int numSites = siteList.size();
+            int siteIndex = 1;
             for (Site site : siteList) {
                 DiscretizedFuncAPI hazardCurve =
                         new ArbitrarilyDiscretizedFunc();
@@ -87,6 +89,8 @@ public class HazardCalculator {
                     hazardCurve.set(val, 1.0);
                 curveCalculator.getHazardCurve(hazardCurve, site, gmpeMap, erf);
                 results.put(site, hazardCurve);
+                System.out.println("Processed site: "+siteIndex+" of "+numSites);
+                siteIndex = siteIndex + 1;
             }
         } catch (RemoteException e) {
             logger.error(e);
